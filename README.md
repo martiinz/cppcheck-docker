@@ -12,4 +12,3 @@ Parameters to cppcheck can be given after the name of the image.
 ```
 sudo docker run -v $(pwd)/src:/src cppcheck --enable=all --xml --xml-version=2 2> /tmp/test.xml
 ```
-
