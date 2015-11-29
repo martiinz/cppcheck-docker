@@ -17,8 +17,9 @@ The docker repository can be found here: <https://hub.docker.com/r/stefanhudelma
 # Usage
 
 The directory with the source to be checked must be mounted as a volume under /src.
-Parameters to cppcheck can be given after the name of the image.
+Parameters to cppcheck can be given after the image.
 
 ```
-sudo docker run -v $(pwd)/src:/src cppcheck --enable=all --xml --xml-version=2 2> /tmp/cppcheck.xml
+docker run -v $(pwd)/src:/src stefanhudelmaier/cppcheck \
+	--enable=all --xml --xml-version=2 2> /tmp/cppcheck.xml
 ```
