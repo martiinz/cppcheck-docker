@@ -1,9 +1,13 @@
+# cppcheck-docker
+
 Docker image for cppcheck - a static analysis tool for C++
 
 See <http://cppcheck.sourceforge.net>
 
 This docker image might be useful for continuous integration scenarios
 where one does not want to install cppcheck on all slave nodes.
+
+The docker repository can be found here: <https://hub.docker.com/r/stefanhudelmaier/cppcheck/>
 
 # Available tags
 
