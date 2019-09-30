@@ -20,6 +20,9 @@ The directory with the source to be checked must be mounted as a volume under /s
 Parameters to cppcheck can be given after the image.
 
 ```
-docker run -v $(pwd)/src:/src stefanhudelmaier/cppcheck \
-	--enable=all --xml --xml-version=2 2> /tmp/cppcheck.xml
+docker build -t hizlbuzz/cppcheck SRCFOLDER
+docker run \
+        --mount type=bind,source=$(pwd),target=/src \
+        hizlbuzz/cppcheck \
+        cppcheck --enable=all -I /src/Common/src/ --xml --xml-version=2 /src/SensorDeamons 2> /src/cppcheck.xml
 ```

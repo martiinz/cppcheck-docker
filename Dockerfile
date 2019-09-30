@@ -10,4 +10,4 @@ RUN cd /tmp/ && tar xvzf cppcheck-1.71.tar.gz
 
 RUN cd /tmp/cppcheck-1.71 && make install SRCDIR=build CFGDIR=/cfg HAVE_RULES=yes
 
-ENTRYPOINT ["cppcheck", "/src"]
+#ENTRYPOINT ["cppcheck", "/src"]
